@@ -1,0 +1,24 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.hero-section {
+  min-height: 75vh;
+  color: white;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+    linear-gradient(135deg, #ff7eb3, #ff758c, #ffb347);
+}
+
+.hero-section h1 {
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+.card {
+  border: none;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
