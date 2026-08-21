@@ -14,21 +14,19 @@ if (loginForm) {
       return;
     }
 
-    loginMessage.textContent =
-      "Login form validated successfully.";
-
+    loginMessage.textContent = "Login form validated successfully.";
     loginMessage.classList.remove("d-none");
 
     console.log("Login data:", {
       email: loginEmail.value,
-      password: loginPassword.value
+      password: loginPassword.value,
     });
+
+    setTimeout(function () {
+      window.location.href = "./index.html";
+    }, 1000);
   });
 }
-setTimeout(function () {
-  window.location.href = "./index.html";
-}, 1000);
-
 
 // REGISTRATION FORM VALIDATION
 const registerForm = document.getElementById("registerForm");
@@ -46,9 +44,7 @@ if (registerForm) {
     confirmPassword.setCustomValidity("");
 
     if (registerPassword.value !== confirmPassword.value) {
-      confirmPassword.setCustomValidity(
-        "Passwords do not match."
-      );
+      confirmPassword.setCustomValidity("Passwords do not match.");
     }
 
     if (!registerForm.checkValidity()) {
@@ -56,14 +52,12 @@ if (registerForm) {
       return;
     }
 
-    registerMessage.textContent =
-      "Registration form validated successfully.";
-
+    registerMessage.textContent = "Registration form validated successfully.";
     registerMessage.classList.remove("d-none");
 
     console.log("Registration data:", {
       name: registerName.value,
-      email: registerEmail.value
+      email: registerEmail.value,
     });
 
     registerForm.reset();
